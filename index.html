@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Video to GIF</title>
+	<script src="/socket.io/socket.io.js"></script>	
+	<script src="/scripts/main.js"></script>
+	<script src="/scripts/network.js"></script>
+	<style>
+		body {
+			font-family: Roboto, sans-serif;
+		}
+		
+		#drop_zone {
+			width: 660px;
+			height: 120px;
+			border: 2px dashed #bbb;
+			margin: 50px auto 25px auto;
+			text-align: center;
+			padding-top: 90px;
+		}
+		
+		.over_drop_zone {
+			background-color: #f8f8f8;
+		}
+		
+		#progressBar {
+			width: 660px;
+			height: 30px;
+			background-color: #d2e8fc;
+			margin: 0 auto;
+			display: none;
+		}
+		
+		#line {
+			background-color: #6db4f6;
+			height: 30px;
+		}
+		
+		input {
+			display: none;
+		}
+		
+		label {
+			font-size: 19px;
+		}
+		
+		#selectFile {
+			cursor: pointer;
+		}
+		
+		#statusBlock {
+			display: none;
+			width: 650px;
+			margin: 20px auto;
+			font-size: 14px;
+			border: 1px solid #ccc;
+			padding: 5px;
+			height: 20px;
+			line-height: 20px;
+		}
+		
+		#image {
+			width: 660px;
+			margin: 0 auto;
+		}
+		
+		img {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<form ref='uploadForm' id='uploadForm' action='/upload_video' method='post' encType="multipart/form-data">
+		<div id="drop_zone">
+			<label>
+				<input type="file" name="video" id="videoFile"/>
+				<strong id="selectFile">Выберите файл</strong>
+				<span>или перетащите сюда</span>
+			</label>
+		</div>
+	</form>
+	<div id="progressBar"><div id="line"></div></div>
+	<div id="statusBlock"></div>
+	
+	<div id="image"></div>
+</body>
+
+</html>
