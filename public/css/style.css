@@ -1,0 +1,61 @@
+body {
+	font-family: Roboto, sans-serif;
+}
+
+#drop_zone {
+	width: 660px;
+	height: 120px;
+	border: 2px dashed #bbb;
+	margin: 50px auto 25px auto;
+	text-align: center;
+	padding-top: 90px;
+}
+
+.over_drop_zone {
+	background-color: #f8f8f8;
+}
+
+#progressBar {
+	width: 660px;
+	height: 30px;
+	background-color: #d2e8fc;
+	margin: 0 auto;
+	display: none;
+}
+
+#line {
+	background-color: #6db4f6;
+	height: 30px;
+}
+
+input {
+	display: none;
+}
+
+label {
+	font-size: 19px;
+}
+
+#selectFile {
+	cursor: pointer;
+}
+
+#statusBlock {
+	display: none;
+	width: 650px;
+	margin: 20px auto;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	height: 20px;
+	line-height: 20px;
+}
+
+#image {
+	width: 660px;
+	margin: 0 auto;
+}
+
+img {
+	margin-bottom: 20px;
+}

@@ -1,16 +1,16 @@
-## Требования
+## You need
 
-Для обработки видео необходим [FFmpeg](https://ffmpeg.org)
+For video processing required [FFmpeg](https://ffmpeg.org)
 
-Создать папку public/gifs
+Create folder ./public/gifs
 
-## Установка
+## Install
 
 ```bash
 npm instal
 ```
 
-## Для использования
+## For using
 
 ```bash
 npm start
