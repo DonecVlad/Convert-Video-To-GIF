@@ -25,6 +25,11 @@ io.on('connection', (socket) => {
 		users.push({socket:socket.id, id:u_id})
 		socket.emit('key', u_id)
 	})
+	
+	// Добавить обработчик ушедших пользователей
+	// Следить за users, тут утечка памяти будет, лет через 200, но точно будет
+	socket.on('disconnect', () => {
+	})
 })
 
 app.post('/upload_video', upload.single('video'), (req, res) => {
