@@ -31,7 +31,7 @@ exports.getFPS = (file) => {
 
 exports.generateGIF = (file, fps, sessionID, offset = '00:00', duration = 5) => {
 	return new Promise(function(resolve, reject) {
-		let ffmpeg = spawn('./toGIF', [file, `public/gifs/${sessionID}.gif`, fps, offset, duration])
+		let ffmpeg = spawn('./toGIF', [file, `public/gifs/${sessionID}.gif`, fps < 30 ? fps : 30 , offset, duration])
 		
 		try {
 			ffmpeg.on('close', () => {

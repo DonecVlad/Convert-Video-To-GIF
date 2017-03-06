@@ -1,8 +1,6 @@
-## You need
+## Requirements
 
-For video processing required [FFmpeg](https://ffmpeg.org)
-
-Create folder ./public/gifs
+For video processing you need [FFmpeg](https://ffmpeg.org)
 
 ## Install
 
